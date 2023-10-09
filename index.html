@@ -5,40 +5,40 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Форма реєстрації</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='adaptive.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/adaptive.css'>
 </head>
 <body>
  <main>
-<form method="get">
+<form method="get" id="user-register-form">
     <div class="register-form-container">
         <h1 class="form-title">Реєстрація користувача</h1>
         <div class="form-fields">
             <label for="phone">Ім'я та прізвище</label>
            <div class="inline-block">
             <div class="form-field inline-field">
-                <input type="text" id="first-name" placeholder="Максим" pattern="^[А-Яа-я]+$" title="Введіть валідне ім'я" required>
+                <input type="text" id="first-name" name="first-name" placeholder="Максим" pattern="^[А-Яа-я]+$" title="Введіть валідне ім'я" required>
             </div>
             <div class="form-field inline-field" >
-                <input type="text"  id="second-name" placeholder="Борщ" pattern="^[А-Яа-я]+$" title="Введіть валідне прізвище" required>
+                <input type="text"  id="second-name" name="second-name" placeholder="Борщ" pattern="^[А-Яа-я]+$" title="Введіть валідне прізвище" required>
             </div>
            </div>
            <div class="form-field">
             <label for="phone">Номер телефону</label>
-            <input type="tel"  id="phone" placeholder="+380970719511" pattern="\+380[0-9]{9}" title="Введіть український номер телефону з використанням +380" required>
+            <input type="tel"  id="phone" name="phone" placeholder="+380970719511" pattern="\+380[0-9]{9}" title="Введіть український номер телефону з використанням +380" required>
         </div>
             <div class="form-field">
                 <label for="email">Пошта</label>
-                <input type="email" id="mail" placeholder="maximka@gmail.com" maxlength="50" title="Введіть коректну адресу вашої пошти" required>
+                <input type="email" id="mail" name="mail" placeholder="maximka@gmail.com" maxlength="50"  required>
             </div>
             <div class="form-field">
                 <label for="password">Пароль</label>
-                <input type="password" placeholder="Ваш секретний пароль" maxlength="50" minlength="8" required>
+                <input type="password" name="password" placeholder="Ваш секретний пароль" maxlength="50" minlength="8" required>
             </div>
 
             <div class="form-field">
                 <label for="selection">Місце перебування:</label>
-                <select id="location" required title="Вкажіть ваше місце перебування">
+                <select id="location" name="location" required title="Вкажіть ваше місце перебування">
                     <option value="ukraine">Україна</option>
                     <option value="bord">За кордоном</option>
                 </select>
@@ -46,16 +46,24 @@
             
             <div class="form-field">
                 <label for="birthdate">Дата народження:</label>
-                <input type="date" id="birthdate" placeholder="Дата народження" title="Вкажіть дату вашого народження" required>
+                <input type="date" id="birthdate" name="birthdate" placeholder="Дата народження" value="09.09.2023" title="Вкажіть дату вашого народження" required>
             </div>
             <div class="form-field">
-                <input type="checkbox" id="terms" title="Для закінчення реєстрації будь-ласка підтвердіть" required>
+                <input type="checkbox" id="terms" name="checkbox" title="Для закінчення реєстрації будь-ласка підтвердіть" required>
                 <label for="terms">Я згоден з умовами сервісу</label>
             </div>
         </div>
-        <input type="submit" class="button" value="Зареєструватися">
+        <input type="button" class="button" id="registerUser" value="Зареєструватися">
+        <br>
+        <a href="auth.html">
+        <input type="button" class="button" id="" value="Авторизація">
+        </a>
+
     </div>
     </form>
  </main>
 </body>
+<script src="js/register.js"></script>
+<script src="js/user.js"></script>
+
 </html>

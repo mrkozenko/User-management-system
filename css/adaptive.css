@@ -1,0 +1,14 @@
+@media only screen and (max-width: 768px) {
+
+    .register-form-container {
+        width: 90%;  
+        padding: 20px;  /* внутрішній відступ */
+    }
+
+    .inline-block {
+        flex-direction: column;    }
+
+    .form-field.inline-field {
+        margin-bottom: 10px;  /*відступ між ім'ям та прізвищем */
+    }
+}
