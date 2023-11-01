@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дані користувачів</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/users.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/adaptive.css'>
+</head>
+<body>
+    <main>
+    <h1 style="text-align: center;">Дані зареєстрованих користувачів</h1>
+    <div class="maindiv">
+    <table id="userTable" class="styled-table">
+
+        <thead>
+            <tr>
+                <th>Номер</th>
+                <th>Пошта</th>
+                <th>Ім'я та Прізвище</th>
+                <th>Телефон</th>
+                <th>Веб-сайт</th>
+                <th>Нікнейм</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Рядок з даними користувача буде додано тут -->
+        </tbody>
+    </table>
+</div>
+<div class="maindiv">
+    <input type="button" class="button" id="loadApiButton" value="Завантажити користувачів">
+
+</div>
+</main>
+
+</body>
+<script src="js/apiUsers.js"></script>
+<script src="js/db.js"></script>
+
+</html>

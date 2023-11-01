@@ -18,6 +18,26 @@ function buildTable(){
     });
 }
 
-document.addEventListener("DOMContentLoaded", function(event) {
-    buildTable()    
-});
+// document.addEventListener("DOMContentLoaded", function(event) {
+//     buildTable()    
+// });
+
+
+function generateTableFromJSON(jsonAPI){
+    const tableBody = document.querySelector("#userTable tbody");
+    jsonAPI.forEach((user) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${user.id}</td>
+            <td>${user.email}</td>
+            <td>${user.name}</td>
+            <td>${user.phone}</td>
+            <td>${user.website}</td>
+            <td>${user.username}</td>
+
+
+        `;
+    
+        tableBody.appendChild(row);
+    });
+}
