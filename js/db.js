@@ -34,8 +34,6 @@ function generateTableFromJSON(jsonAPI) {
             <td>${user.phone}</td>
             <td>${user.website}</td>
             <td>${user.username}</td>
-
-
         `;
 
     tableBody.appendChild(row);
