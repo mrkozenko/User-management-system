@@ -1,146 +1,141 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;   
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family: 'Roboto', sans-serif;
+body {
+  font-family: "Roboto", sans-serif;
 }
-main{
-    background: #F1F5FE;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+main {
+  background: #f1f5fe;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 input {
-    height: 45px;
-    width: 100%;
-    font-size:14px;
-    line-height: 16px;
-    border: 2px solid #E9F2FF;
-    border-radius: 5px;
-    padding-left:25px;
-    color:#385983;
+  height: 45px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 16px;
+  border: 2px solid #e9f2ff;
+  border-radius: 5px;
+  padding-left: 25px;
+  color: #385983;
 }
 input.button {
-    height: 45px;
-    width: 100%;
-    font-size:14px;
-    line-height: 16px;
-    border: 2px solid #E9F2FF;
-    border-radius: 5px;
-    color:#ffffff;
-    padding-right: 20px;
+  height: 45px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 16px;
+  border: 2px solid #e9f2ff;
+  border-radius: 5px;
+  color: #ffffff;
+  padding-right: 20px;
 }
-label{
-    color:#385983;
-    margin-bottom: 8px;
-    display: inline-block; 
+label {
+  color: #385983;
+  margin-bottom: 8px;
+  display: inline-block;
 }
 
 input:invalid:not(:placeholder-shown) {
-    border-color: #f7482d;
+  border-color: #f7482d;
 }
 
-.form-title{
-    color:#305070;
-    font-weight:bold;
-    font-size:20px;
-    line-height:23px;
-    margin-bottom: 28px;
-    text-align: center;
-
+.form-title {
+  color: #305070;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 28px;
+  text-align: center;
 }
-input:focus{
-    outline: none;
-    border: 2px solid #C1D9FD; 
+input:focus {
+  outline: none;
+  border: 2px solid #c1d9fd;
 }
-.register-form-container{
-    z-index:2;
-    position: relative;
-    max-width: 415px;
-    width: 100%;
-    background-color: #FFFFFF;
-    box-shadow: 0px 6px 50px rgba(217, 229, 255,0.7);
-    border-radius: 20px;
-    padding: 38px 30px 38px 30px;
+.register-form-container {
+  z-index: 2;
+  position: relative;
+  max-width: 415px;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 6px 50px rgba(217, 229, 255, 0.7);
+  border-radius: 20px;
+  padding: 38px 30px 38px 30px;
 }
-.form-field{
-    margin-bottom: 13px;
+.form-field {
+  margin-bottom: 13px;
 }
-.inline-block{
-    display: flex;
-    justify-content: space-between;
+.inline-block {
+  display: flex;
+  justify-content: space-between;
 }
 
 .inline-field {
-    margin-right: 10px;
-    display: flex;
-    flex: 1; /* це розтягує кожний блок, щоб він заповнив доступний простір */
+  margin-right: 10px;
+  display: flex;
+  flex: 1; /* це розтягує кожний блок, щоб він заповнив доступний простір */
 }
 .inline-field:last-child {
-    margin-right: 0; /* видаляємо відступ для останнього елемента, щоб уникнути двійного відступу */
+  margin-right: 0; /* видаляємо відступ для останнього елемента, щоб уникнути двійного відступу */
 }
 
 .button {
-    font-weight: bold;
-    font-size: 14px;
-    height: 45px;
-    display: block;
-    background-color: #247FFF;
-    border-radius: 5px;
-    color:#fff;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 45px;
-    cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  height: 45px;
+  display: block;
+  background-color: #247fff;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 45px;
+  cursor: pointer;
 }
 
-.button:hover{
-    background-color: #0D6CF2;
+.button:hover {
+  background-color: #0d6cf2;
 }
-.button-auth{
-    color:#C6CFDC;
-    background-color: #F2F6FF;
+.button-auth {
+  color: #c6cfdc;
+  background-color: #f2f6ff;
 }
 input[type="checkbox"] {
-    width: 20px;  /* Регулювання розміру */
-    height: 20px;
-    margin-right: 5px;  /* Відступ між чекбоксом і його міткою */
-    vertical-align: middle;
-    margin-left: 5px;
-    
+  width: 20px; /* Регулювання розміру */
+  height: 20px;
+  margin-right: 5px; /* Відступ між чекбоксом і його міткою */
+  vertical-align: middle;
+  margin-left: 5px;
 }
 input[type="checkbox"] + label {
-    vertical-align: middle;
-    margin-bottom: -2px;
-
+  vertical-align: middle;
+  margin-bottom: -2px;
 }
 
 select {
-    width: 100%;
-    height: 45px;
-    padding: 5px 10px;
-    font-size: 14px;
-    border: 2px solid #E9F2FF;
-    border-radius: 5px;
-    color: #385983;
-    background-color: #fff;
-    -webkit-appearance: none; /* це видалить стандартний вигляд у Webkit-браузерах */
-    -moz-appearance: none; /* це видалить стандартний вигляд у Firefox */
-    appearance: none; /* це видалить стандартний вигляд у інших браузерах */
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6"><path fill="%23385983" d="M6 6L0 0h12L6 6z"/></svg>'); /* це додасть стрілку-індикатор */
-    background-repeat: no-repeat;
-    background-position: 95% center;
-    cursor: pointer;
+  width: 100%;
+  height: 45px;
+  padding: 5px 10px;
+  font-size: 14px;
+  border: 2px solid #e9f2ff;
+  border-radius: 5px;
+  color: #385983;
+  background-color: #fff;
+  -webkit-appearance: none; /* це видалить стандартний вигляд у Webkit-браузерах */
+  -moz-appearance: none; /* це видалить стандартний вигляд у Firefox */
+  appearance: none; /* це видалить стандартний вигляд у інших браузерах */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6"><path fill="%23385983" d="M6 6L0 0h12L6 6z"/></svg>'); /* це додасть стрілку-індикатор */
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  cursor: pointer;
 }
 
 select:focus {
-    outline: none;
-    border: 2px solid #C1D9FD;
+  outline: none;
+  border: 2px solid #c1d9fd;
 }
-
-

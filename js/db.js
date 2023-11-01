@@ -1,10 +1,10 @@
-function buildTable(){
-    let users = getAllUsers()
-    const tableBody = document.querySelector("#userTable tbody");
-    users.forEach((user, index) => {
-        const row = document.createElement("tr");
-        row.innerHTML = `
-            <td>${index+1}</td>
+function buildTable() {
+  let users = getAllUsers();
+  const tableBody = document.querySelector("#userTable tbody");
+  users.forEach((user, index) => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+            <td>${index + 1}</td>
             <td>${user.mail}</td>
             <td>${user["first-name"]}</td>
             <td>${user["second-name"]}</td>
@@ -13,21 +13,21 @@ function buildTable(){
             <td>${user.password}</td>
             <td>${user.phone}</td>
         `;
-    
-        tableBody.appendChild(row);
-    });
+
+    tableBody.appendChild(row);
+  });
 }
 
 // document.addEventListener("DOMContentLoaded", function(event) {
-//     buildTable()    
+//     buildTable()
 // });
 
-
-function generateTableFromJSON(jsonAPI){
-    const tableBody = document.querySelector("#userTable tbody");
-    jsonAPI.forEach((user) => {
-        const row = document.createElement("tr");
-        row.innerHTML = `
+function generateTableFromJSON(jsonAPI) {
+  const tableBody = document.querySelector("#userTable tbody");
+  tableBody.innerHTML = "";
+  jsonAPI.forEach((user) => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
             <td>${user.id}</td>
             <td>${user.email}</td>
             <td>${user.name}</td>
@@ -37,7 +37,7 @@ function generateTableFromJSON(jsonAPI){
 
 
         `;
-    
-        tableBody.appendChild(row);
-    });
+
+    tableBody.appendChild(row);
+  });
 }

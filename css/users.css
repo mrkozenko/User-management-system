@@ -1,42 +1,42 @@
 .styled-table {
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 0.9em;
-    font-family: sans-serif;
-    min-width: 400px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 .styled-table thead tr {
-    background-color: #385983;
-    color: #ffffff;
-    text-align: left;
+  background-color: #385983;
+  color: #ffffff;
+  text-align: left;
 }
 .styled-table th,
 .styled-table td {
-    padding: 12px 15px;
+  padding: 12px 15px;
 }
 .styled-table tbody tr {
-    border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
 }
 
 .styled-table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
+  background-color: #f3f3f3;
 }
 
 .styled-table tbody tr:last-of-type {
-    border-bottom: 2px solid #385983;
+  border-bottom: 2px solid #385983;
 }
 
 .styled-table {
-    /* ви можете додати інші стилі для таблиці тут */
-    width: 80%; /* або будь-який інший розмір, який вам потрібен */
+  /* ви можете додати інші стилі для таблиці тут */
+  width: 80%; /* або будь-який інший розмір, який вам потрібен */
 }
 
 .maindiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .maindiv a input {
-    padding-left: 5px;
+  padding-left: 5px;
 }
