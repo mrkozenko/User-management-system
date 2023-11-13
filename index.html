@@ -20,7 +20,7 @@
   </head>
   <body>
     <main>
-      <form method="get" id="user-register-form">
+      <form method="POST" id="user-register-form" action="server/register.php">
         <div class="register-form-container">
           <h1 class="form-title">Реєстрація користувача</h1>
           <div class="form-fields">
@@ -121,7 +121,7 @@
             </div>
           </div>
           <input
-            type="button"
+            type="submit"
             class="button"
             id="registerUser"
             value="Зареєструватися"
@@ -134,6 +134,4 @@
       </form>
     </main>
   </body>
-  <script src="js/register.js"></script>
-  <script src="js/user.js"></script>
 </html>
