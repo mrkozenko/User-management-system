@@ -16,38 +16,30 @@ if (isset($_POST)) {
            
             //check user exist and auth
             $is_exist = userExists($email);
+            $data = array();
+            $data["success"] =false;
             if ($is_exist) {
                 $user = getUserDetailsByEmail($email);
                 if ($user['password'] == $password) {
                 session_start();
                 // save user info to session
                 $_SESSION['email'] = $email;
-                $_SESSION['full_name'] = $user['full_name'];
-                header("Location: ../users.php");
-                exit();
+                $_SESSION['full_name'] = $user['fullname'];
+                $data["success"] =true;
+                $data["message"] ="";
                 } else{
-                    echo $user['password'];
-                    echo "<br>";
-                    echo $password;
-                echo "Вказаний вами пароль є помилковим";
+                    $data["message"] ="Вказаний вами пароль є помилковим";
                 }
             } else {
-                echo "Користувача з такою поштою нема в системі";
+                $data["message"] ="Користувача з такою поштою нема в системі";
             }
         } else {
-            echo "Всі поля повинні бути заповнені.";
+            $data["message"] ="Всі поля повинні бути заповнені.";
         }
     } else {
-        echo "Невірний формат даних.";
+        $data["message"] ="Невірний формат даних.";
     }
-    echo ' <div class="maindiv">
-        <a href="../auth.html">
-          <input type="button" class="button" value="Авторизація" />
-        </a>
-        <a href="../index.html">
-          <input type="button" class="button" value="Реєстрація" />
-        </a>
-      </div>';
+     echo json_encode($data);
 
 }
 ?>

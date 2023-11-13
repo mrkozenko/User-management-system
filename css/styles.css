@@ -44,7 +44,9 @@ label {
 input:invalid:not(:placeholder-shown) {
   border-color: #f7482d;
 }
-
+.message {
+  color: red;
+}
 .form-title {
   color: #305070;
   font-weight: bold;

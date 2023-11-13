@@ -17,12 +17,15 @@
       media="screen"
       href="css/adaptive.css"
     />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   </head>
   <body>
     <main>
       <form method="POST" id="authForm" action="server/auth.php">
         <div class="register-form-container">
           <h1 class="form-title">Авторизація користувача</h1>
+          <p id="message" class="message"></p>
+
           <div class="form-fields">
             <div class="form-field">
               <label for="email">Пошта</label>
@@ -50,7 +53,7 @@
             </div>
           </div>
           <input
-            type="submit"
+            type="button"
             class="button"
             id="authUserBtn"
             value="Авторизуватися"
@@ -64,4 +67,5 @@
     </main>
   </body>
   <script src="js/validation.js"></script>
+  <script src="js/requests.js"></script>
 </html>
